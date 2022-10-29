@@ -1,0 +1,193 @@
+
+.contenedorForm{
+    position: relative;
+}
+
+form{
+    width: 100%;
+}
+
+.formulario{
+    width: 32%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 470px;
+    top: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.input{
+    width: 84%;
+    padding: 14px 10px 14px 0;
+    outline: none;
+    font-size: 20px;
+    color: hsl(236, 9%, 61%);
+    border: none;
+    border-radius: 5px;
+}
+
+.circleUno{
+    padding: 12px 12px;
+    border: 1px solid hsl(236, 9%, 61%);
+    border-radius: 50%;
+    margin-left: 21px;
+    margin-right: 20px;
+    font-size: 80%;
+    width: 26px;
+    height: 23px;
+}
+
+
+.contenedorData{
+    width: 32%;
+    min-height: 200px;
+    max-height: 4000px;
+    border: 1px solid white;
+    background-color: white;
+    margin-left: 472px;
+    margin-top: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    /* border-radius: 7px; */
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.estiloTodo{
+    display: flex;
+    width: 100%;
+    justify-items: center;
+    min-height: 44px;
+    max-height: 200px;
+    background-color: white;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.circle{
+    padding: 12px 12px;
+    border: 1px solid hsl(236, 9%, 61%);
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.ancla{
+    width: 80%;
+    padding: 20px 0;
+    word-wrap: break-word;
+}
+
+article{
+    width: 32%;
+    height: 60px;
+    margin-left: 472px;
+    top: 120%;
+    background-color: white;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.filtro{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    margin-left: 10px;
+    color: hsl(236, 9%, 61%);
+}
+
+.filtrado{
+    position: relative;
+    width: 60%;
+    margin-left: 120px;
+    color: hsl(236, 9%, 61%);
+}
+
+.filtro a:hover{
+    color: black;
+}
+
+.filtrado a:hover{
+    color: black;
+}
+
+.filtro .completed:hover{
+    color: black;
+}
+
+.completed{
+    margin-left: 220px;
+}
+
+.active{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* responsive */
+
+@media screen and (max-width:600px) {
+
+    form{
+        width: 90%;
+    }
+
+    .formulario{
+       margin-left: 20px;
+        width: 90%;
+    }
+
+    .input{
+        width: 100%;
+    }
+
+    .contenedorData{
+        width: 90%;
+       margin-left: 20px;
+    }
+
+    .circle{
+        margin-left: 21px;
+        margin-right: 20px;
+    }
+
+    article{
+        width: 90%;
+        height: 50px;
+        margin-left: 20px;
+    }
+
+    .filtro{
+        display: flex;
+        position: inherit;
+        color: hsl(236, 9%, 61%);
+        margin-right: 10px;
+    }
+
+    .filtro a{
+        margin-top: 10px;
+    }
+    
+    .filtrado{
+        position: inherit;
+        width: 100%;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        color: hsl(236, 9%, 61%);
+        margin-top: 30px;
+        background-color: white;
+        border-radius: 7px;
+        text-align: center;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        padding-top: 10px;
+    }
+    
+    .completed{
+        margin-left: 0px;
+    }
+    
+}

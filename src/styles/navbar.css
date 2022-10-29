@@ -1,0 +1,62 @@
+
+.contenedorImg{
+    position: absolute;
+    width: 100%;
+}
+
+.contenedorTextos{
+    position: relative;
+    display: flex;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titulo{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 14px;
+    color: white;
+    margin-top: 60px;
+}
+
+.ligthBoton{
+    margin-top: 60px;
+}
+
+.imgMobile{
+    display: none;
+}
+
+/* responsibe navbar */
+
+@media screen and (max-width:600px) {
+    
+    .img{
+        display: none;
+    }
+
+    .imgMobile{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .contenedorTextos{
+        width: 90%;
+        margin-left: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .titulo{
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    .ligthBoton{
+        margin-top: 30px;
+    }
+}
