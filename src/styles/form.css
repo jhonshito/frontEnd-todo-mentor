@@ -36,8 +36,9 @@ form{
     margin-left: 21px;
     margin-right: 20px;
     font-size: 80%;
-    width: 26px;
-    height: 23px;
+    width: 32px;
+    height: 30px;
+    /* font-size: 10px; */
 }
 
 
@@ -67,11 +68,14 @@ form{
 }
 
 .circle{
-    padding: 12px 12px;
+    width: 29px;
+    height: 29px;
+    /* padding: 12px 12px; */
     border: 1px solid hsl(236, 9%, 61%);
     border-radius: 50%;
     margin-left: 20px;
     margin-right: 20px;
+    font-size: 29px;
 }
 
 .ancla{
@@ -190,4 +194,21 @@ article{
         margin-left: 0px;
     }
     
+}
+
+
+/* estado del boton */
+
+.ediBoton{
+    background-color: red;
+    border: 0px solid #6AA2FB;
+    background-image: linear-gradient(to top, #7E3DD0, #6AA2FB );
+}
+
+i{
+    color: white;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

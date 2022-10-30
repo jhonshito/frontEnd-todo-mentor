@@ -1,29 +1,41 @@
 
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import '../styles/form.css';
-import { v4 as uuidv4 } from 'uuid';
 import { useEffect } from 'react';
+import { BsCheck2 } from "react-icons/bs";
 
 const Form = () => {
+
 
   const [datos, setDatos] = useState({
     todo: '',
     estado: false,
-    id :  uuidv4(),
-    dafault: '123'
+    id :  Date.now(),
+    colorBoton : '',
+    styleBoton : '',
+    iconBoton : ''
   });
 
-  const [local, setLocal] = useState([]);
   const [data, setData] = useState([]);
 
-    const handleChange = (e) => {
+  const form = useRef(null)
 
-      
+    const handleChange = (e) => {
       e.preventDefault()
-      datos.id = uuidv4()
+      datos.id = Date.now()
       setDatos(datos)
       setData((old) => [...old, datos])
+
+      if(datos.colorBoton == true){
+        datos.styleBoton = 'ediBoton'
+        datos.iconBoton = <BsCheck2 />
+      }else {
+        datos.styleBoton = ''
+        datos.iconBoton = ''
+      }
+
+      form.current.reset()
     }
 
     useEffect(() => {
@@ -36,15 +48,24 @@ const Form = () => {
       localStorage.setItem('pendiente', JSON.stringify(data))
    },[data])
 
+   const boton = useRef(null);
+
    const handleClick = (e) => {
-    console.log('siiii', e.target.value)
+    datos.colorBoton = boton.current.classList.toggle('ediBoton')
+    // console.log(datos.colorBoton)
    }
+
+
+  //  limpiar localStoerange
+  const handleClear = () => {
+    localStorage.clear();
+  }
 
   return (
     <section className='contenedorForm'>
           <div className='formulario'>
-            <button value={true} onClick={(e) => handleClick(e)} className='circleUno'></button>
-            <form onSubmit={handleChange}>
+            <button ref={boton} value={true} onClick={(e) => handleClick(e)} className={`circleUno`}></button>
+            <form ref={form} onSubmit={handleChange}>
                 <input 
                     type="text"
                     placeholder='Create a new todo'
@@ -61,7 +82,8 @@ const Form = () => {
 
               <div key={index}>
                 <div className="estiloTodo">
-                  <button className='circle'>
+                  <button className={`circle ${item.styleBoton}`}>
+                    <i>{item.iconBoton}</i>
                   </button>
                   <a  
                     className='ancla'
@@ -76,7 +98,7 @@ const Form = () => {
           <article>
             <div className='filtro'>
               <a href="">5 items left</a>
-              <a className='completed' href="">Clear completed</a>
+              <a onClick={handleClear} className='completed' href="">Clear completed</a>
             </div>
             <div className='filtrado'>
               <a href="">All</a>
