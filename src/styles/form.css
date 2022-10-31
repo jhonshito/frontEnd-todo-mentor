@@ -44,7 +44,7 @@ form{
 
 .contenedorData{
     width: 32%;
-    min-height: 200px;
+    min-height: 0px;
     max-height: 4000px;
     border: 1px solid white;
     background-color: white;
@@ -67,6 +67,12 @@ form{
     border-radius: 7px;
 }
 
+.ancla{
+    text-decoration-line: line-through;
+    text-decoration-color: hsl(236, 9%, 61%);
+    color: hsl(236, 9%, 61%);
+}
+
 .circle{
     width: 29px;
     height: 29px;
@@ -78,7 +84,11 @@ form{
     font-size: 29px;
 }
 
-.ancla{
+.delete{
+    cursor: pointer;
+}
+
+.anclaUno{
     width: 80%;
     padding: 20px 0;
     word-wrap: break-word;
@@ -101,6 +111,7 @@ article{
     position: absolute;
     margin-left: 10px;
     color: hsl(236, 9%, 61%);
+    cursor: pointer;
 }
 
 .filtrado{
@@ -108,6 +119,7 @@ article{
     width: 60%;
     margin-left: 120px;
     color: hsl(236, 9%, 61%);
+    cursor: pointer;
 }
 
 .filtro a:hover{
@@ -211,4 +223,21 @@ i{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* dark model */
+
+.dark .estiloTodo{
+    background-color: #25273C;
+}
+
+.dark .contenedorData{
+    background-color: #25273C;
+    border: 1px solid #25273C;
+}
+
+.dark hr{
+    color: #25273C;
+    background-color: #25273C;
 }
