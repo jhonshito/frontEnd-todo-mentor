@@ -86,6 +86,7 @@ form{
 
 .delete{
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .anclaUno{
@@ -214,7 +215,7 @@ article{
 .ediBoton{
     background-color: red;
     border: 0px solid #6AA2FB;
-    background-image: linear-gradient(to top, #7E3DD0, #6AA2FB );
+    background-image: linear-gradient(to top, #7E3DD0, #6AA2FB);
 }
 
 i{
@@ -235,9 +236,36 @@ i{
 .dark .contenedorData{
     background-color: #25273C;
     border: 1px solid #25273C;
+    box-shadow: #15151F 0px 48px 100px 0px;
 }
 
 .dark hr{
-    color: #25273C;
+    /* color: #25273C; */
+    background-color: red;
+}
+
+.dark .hr{
+    border-top: none;
+    border-bottom: 1px solid #4B4D64;
+}
+
+.dark article{
     background-color: #25273C;
+}
+
+.dark .formulario{
+    background-color: #25273C;
+    border: 1px solid #25273C;
+}
+
+.dark .input{
+    background-color: #25273C;
+}
+
+.dark .filtrado{
+    background-color: #25273C;
+}
+
+.key{
+    border: none;
 }

@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import '../styles/form.css';
 import { useEffect } from 'react';
 import { BsCheck2 } from "react-icons/bs";
+import Validacion from './Validacion';
 
 const Form = () => {
 
@@ -64,7 +65,7 @@ const Form = () => {
 
   //  limpiar localStoerange
   const handleClear = () => {
-    localStorage.clear();
+    localStorage.removeItem('pendiente');
   }
 
 
@@ -103,7 +104,7 @@ const Form = () => {
           {
             data.map((item, index) => (
 
-              <div key={index}>
+              <div className='key' key={index}>
                 <div className="estiloTodo">
                   <button className={`circle ${item.styleBoton}`}>
                     <i className={item.iconBoton}></i>
@@ -116,10 +117,11 @@ const Form = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
                   </a>
                 </div>
-                <hr />
+                <hr className='hr' />
               </div>
             ))
           }
+          <Validacion data={data} />
         </div>
           <article>
             <div className='filtro'>
