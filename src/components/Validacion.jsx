@@ -12,13 +12,10 @@ const Validacion = ({data}) => {
         if(data.length === 0){
             estadoTitulo.current.innerHTML = 'Actualmente sin Tareas'
             setEstado(<img className="imgEstado" src={imagen} alt="" />)
-          console.log('local vacio')
         }else {
             estadoTitulo.current.innerHTML = ''
             setEstado()
-          console.log('hay en el local una cantidad de ', localStorage.length)
         }
-        console.log(data)
       }
 
     useEffect(() => {

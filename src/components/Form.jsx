@@ -21,6 +21,7 @@ const Form = () => {
   });
 
   const [data, setData] = useState([]);
+  const [counter, setCounter] = useState(0);
 
   const form = useRef(null)
 
@@ -40,7 +41,8 @@ const Form = () => {
         datos.iconBoton = ''
       }
 
-      // console.log(data)
+      
+      setCounter(counter+1)
 
       form.current.reset()
     }
@@ -82,6 +84,12 @@ const Form = () => {
 
   const handleDelete = (id) => {
     setData(data.filter(e => e.id !== id))
+    setCounter(counter-1)
+  }
+
+
+  const handleEdi = (e, item) => {
+
   }
 
 
@@ -106,7 +114,7 @@ const Form = () => {
 
               <div className='key' key={index}>
                 <div className="estiloTodo">
-                  <button className={`circle ${item.styleBoton}`}>
+                  <button onClick={(e) => handleEdi(e, item)} className={`circle ${item.styleBoton}`}>
                     <i className={item.iconBoton}></i>
                   </button>
                   <a  
@@ -125,7 +133,7 @@ const Form = () => {
         </div>
           <article>
             <div className='filtro'>
-              <a href="">5 items left</a>
+              <a href="">{counter} items left</a>
               <a onClick={handleClear} className='completed' href="">Clear completed</a>
             </div>
             <div className='filtrado'>
